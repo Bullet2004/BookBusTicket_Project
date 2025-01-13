@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lịch sử đặt vé xe khách</title>
+  <link rel="stylesheet" href="/src/assets/css/history_style.css">
+  <link rel="stylesheet" href="/src/assets/css/base.css">
+</head>
+<body>
+    <div id="nav-bar">
+        <ul class="nav-list-items">
+            <li class="nav-item">
+                <a href="/src/view/index.html">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+                <a href="/src/view/introduction.html">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+                <a href="/src/view/contact.html">Liên hệ</a>
+            </li>
+            <li class="nav-item">
+                <a href="#">Lịch sử đặt vé</a>
+            </li>
+        </ul>
+        <ul class="nav-list-items">
+            <li class="nav-item">
+                <a href="/src/view/login.html" target="_blank">Đăng nhập</a>
+            </li>
+            <li class="nav-item">
+                <a href="/src/view/signup.html" target="_blank">Đăng ký</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>Lịch sử đặt vé xe khách</h1>
+        <div class="sort-container">
+          <label for="sort-select">Sắp xếp:</label>
+          <select id="sort-select" onchange="sortTickets()">
+            <option value="newest">Gần đây nhất</option>
+            <option value="oldest">Cũ nhất</option>
+          </select>
+        </div>
+        <table id="ticket-history">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Loại vé</th>
+              <th>Giá vé</th>
+              <th>Thời gian đặt</th>
+              <th>Trạng thái</th>
+              <th>Hành động</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Data will be injected here by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+      <footer>
+        <div class="footer-group">
+            <h2 class="footer-header">Cam kết</h2>
+            <div class="footer-group-child">
+                <span> 
+                    <i class="ti-check check-icon"></i>
+                    Uy tín
+                </span>
+            </div>
+            <div class="footer-group-child">
+                <span> 
+                    <i class="ti-check check-icon"></i>
+                    Chất lượng
+                </span>
+            </div>
+            <div class="footer-group-child">
+                <span> 
+                    <i class="ti-check check-icon"></i>
+                    Thoải mái như ở nhà
+                </span>
+            </div>
+        </div>
+        <div class="footer-group">
+            <h2 class="footer-header">Liên hệ</h2>
+            <div class="footer-group-child">
+                <label class="footer-label">Số điện thoại: </label class="footer-label">
+                <a href="https://www.facebook.com/thecuong.bui.710" target="_blank">0123456789</a>
+            </div>
+            <div class="footer-group-child">
+                <label class="footer-label">Facebook: </label>
+                <a href="https://www.facebook.com/thecuong.bui.710" target="_blank">Bùi Thế Cường</a>
+            </div>
+        </div>
+        <div class="footer-group">
+            <h2 class="footer-header">Thanh toán</h2>
+            <img src="/src/assets/img/qr.png" alt="" class="qr-img">
+        </div>
+    </footer>
+  <script src="/src/assets/js/history.js"></script>
+</body>
+</html>
