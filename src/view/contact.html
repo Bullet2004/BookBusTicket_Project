@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/assets/css/base.css">
+    <link rel="stylesheet" href="/src/assets/css/contact_style.css">
+    <link rel="stylesheet" href="/src/assets/font/themify-icons-font/themify-icons/themify-icons.css">
+</head>
+<body>
+    <div id="nav-bar">
+        <ul class="nav-list-items">
+            <li class="nav-item">
+                <a href="/src/view/index.html">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+                <a href="/src/view/introduction.html">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+                <a href="#">Liên hệ</a>
+            </li>
+            <li class="nav-item">Lịch sử đặt vé</li>
+        </ul>
+        <ul class="nav-list-items">
+            <li class="nav-item">
+                <a href="/src/view/login.html" target="_blank">Đăng nhập</a>
+            </li>
+            <li class="nav-item">
+                <a href="/src/view/signup.html" target="_blank">Đăng ký</a>
+            </li>
+        </ul>
+    </div>
+    <div id="body">
+        <div class="background-container">
+            <div class="contact-container">
+                <div class="child-contact-container left-container">
+                    <h2 class="contact-header">Liên hệ với chúng tôi</h2>
+                    <div class="contact-details">
+                        <div class="contact-group">
+                            <label for="" class="contact-label">Địa chỉ: </label>
+                            <span class="contact-description">Thị trấn Lệ Ninh, Huyện Lệ Thuỷ, Tỉnh Quảng Bình</span>
+                        </div>
+                        <div class="contact-group">
+                            <label for="" class="contact-label">Số điện thoại: </label>
+                            <span class="contact-description">0123456789</span>
+                        </div>
+                        <div class="contact-group">
+                            <label for="" class="contact-label">Email: </label>
+                            <span class="contact-description">buithecuong2004@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="child-contact-container right-container">
+                    <div class="contact-input-group">
+                        <label for="" class="contact-input-label">Họ và tên:</label>
+                        <input type="text" name="" id="" class="contact-input">
+                    </div>
+                    <div class="contact-input-group">
+                        <label for="" class="contact-input-label">Email:</label>
+                        <input type="text" name="" id="" class="contact-input">
+                    </div>
+                    <div class="contact-input-group">
+                        <label for="" class="contact-input-label">Số điện thoại:</label>
+                        <input type="text" name="" id="" class="contact-input">
+                    </div>
+                    <div class="contact-input-group">
+                        <label for="" class="contact-input-label">Tin nhắn:</label>
+                        <textarea name="" id="" class="contact-input fixed-width-textarea"></textarea>
+                    </div>
+                    <button class="send-btn">Gửi ngay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-group">
+            <h2 class="footer-header">Cam kết</h2>
+            <div class="footer-group-child">
+                <span> 
+                    <i class="ti-check check-icon"></i>
+                    Uy tín
+                </span>
+            </div>
+            <div class="footer-group-child">
+                <span> 
+                    <i class="ti-check check-icon"></i>
+                    Chất lượng
+                </span>
+            </div>
+            <div class="footer-group-child">
+                <span> 
+                    <i class="ti-check check-icon"></i>
+                    Thoải mái như ở nhà
+                </span>
+            </div>
+        </div>
+        <div class="footer-group">
+            <h2 class="footer-header">Liên hệ</h2>
+            <div class="footer-group-child">
+                <label class="footer-label">Số điện thoại: </label class="footer-label">
+                <a href="https://www.facebook.com/thecuong.bui.710" target="_blank">0123456789</a>
+            </div>
+            <div class="footer-group-child">
+                <label class="footer-label">Facebook: </label>
+                <a href="https://www.facebook.com/thecuong.bui.710" target="_blank">Bùi Thế Cường</a>
+            </div>
+        </div>
+        <div class="footer-group">
+            <h2 class="footer-header">Thanh toán</h2>
+            <img src="/src/assets/img/qr.png" alt="" class="qr-img">
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('.nav-item').forEach(item => {
+        item.addEventListener('click', function () {
+            const link = this.querySelector('a');
+            if (link) {
+                link.click(); // Kích hoạt sự kiện nhấp vào thẻ <a>
+            }
+        });
+    });
+    </script>
+</body>
+</html>

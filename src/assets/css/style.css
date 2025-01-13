@@ -1,0 +1,370 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#body {
+  margin-bottom: 50px;
+}
+
+.commitment {
+  display: flex;
+}
+
+.bus-image {
+  width: 850px;
+}
+
+.bus-img {
+  margin: 60px 50px;
+  position: relative;
+  left: -800px; /* Ẩn xe ban đầu */
+  transition: margin-left 2s ease-out; /* Hiệu ứng chuyển động mượt */
+}
+
+.bus-img.active {
+  margin-left: 850px; /* Di chuyển xe sang phải khi cuộn */
+}
+
+.commitment-detail {
+  margin-top: 50px;
+}
+
+.commitment-header {
+  color: #fb9f1d;
+}
+
+.commitment-list {
+  margin-top: 30px;
+  margin-left: -30px;
+}
+
+.commitment-item {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-size: 25px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  color: #0c6a60;
+}
+
+.commitment-icon {
+  font-size: 30px;
+  margin-right: 15px;
+}
+
+
+/* Tổng quan slider */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    display: flex; 
+    width: 100%; 
+    transition: transform 1s ease; 
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('/src/assets/img/thienphu1.jpg') top center / cover no-repeat;
+}
+
+.form {
+    width: 360px;
+    min-height: 100px;
+    padding: 16px 24px 32px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+    margin: 24px;
+    align-self: center;
+    box-shadow: 0 0 10px 5px rgba(248, 237, 39, 0.2); 
+  }
+  .form .heading {
+    font-size: 2rem;
+  }
+  .form .desc {
+    text-align: center;
+    color: #636d77;
+    font-size: 1.6rem;
+    font-weight: lighter;
+    line-height: 2.4rem;
+    margin-top: 16px;
+    font-weight: 300;
+  }
+  
+  .form-group {
+    display: flex;
+    margin-bottom: 16px;
+    flex-direction: column;
+  }
+  
+  .form-label,
+  .form-message {
+    text-align: left;
+  }
+  
+  .form-label {
+    font-weight: 700;
+    padding-bottom: 6px;
+    line-height: 1.8rem;
+    font-size: 1.4rem;
+  }
+  
+  .form-control {
+    height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #b3b3b3;
+    border-radius: 3px;
+    outline: none;
+    font-size: 1.4rem;
+  }
+  
+  .form-control:hover {
+    border-color: #1dbfaf;
+  }
+  
+  .form-group.invalid .form-control {
+    border-color: #f33a58;
+  }
+  
+  .form-group.invalid .form-message {
+    color: #f33a58;
+  }
+  
+  .form-message {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    padding: 4px 0 0;
+  }
+  
+  .form-submit {
+    outline: none;
+    background-color: #1dbfaf;
+    margin-top: 12px;
+    padding: 12px 16px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .form-submit:hover {
+    background-color: #1ac7b6;
+  }
+  
+  .spacer {
+    margin-top: 36px;
+  }
+
+  .title {
+    margin-left: 75px;
+    font-size: 30px;
+  }
+
+  .list-routes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  
+  .route-item {
+    width: 300px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .route-item:hover {
+    transform: translateY(-4px);
+    transition: transform 0.2s ease; 
+
+  }
+
+  .demo-image {
+    width: 100%;
+    height: 180px;
+  }
+
+  .demo-container {
+    position: relative;
+  }
+
+  .from {
+    position: absolute;
+    top: 140px;
+    left: 15px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .from-position {
+    position: absolute;
+    top: 160px;
+    left: 15px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .route-detail {
+    margin: 10px 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .destination-and-price {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .destination {
+    font-size: 16px;
+    font-weight: 600;
+    color: #005252;
+  }
+
+  .during {
+    margin-top: 8px;
+    font-size: 15px;
+  }
+
+  .price {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .book-btn {
+    border: none;
+    width: 90px;
+    margin-top: 10px;
+    padding: 8px 15px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #228686;
+  }
+
+  .book-btn:hover {
+    cursor: pointer;
+    background-color: #259292;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal.open {
+    display: flex;
+  }
+
+  .modal-container {
+    background: #fff;
+    width: 900px;
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease 0.3s;
+  }
+
+  .modal-header {
+    background-color: #009688;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+  }
+
+  .ticket-icon {
+    margin-right: 16px;
+  }
+
+  .modal-close {
+    position: absolute;
+    padding: 10px;
+    top: 0;
+    right: 0;
+    font-weight: 600;
+    color: white;
+  }
+
+  .modal-close:hover {
+    color: #ccc;
+    cursor: pointer;
+  }
+
+  .modal-group {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-label {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  .info-input {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .ok-btn {
+    border: none;
+    margin: 10px 20px;
+    padding: 18px;
+    width: 860px;
+    background: #009688;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+  .ok-btn:hover {
+    opacity: 0.8;
+  }
+
+  @keyframes modalFadeIn {
+    from {
+      transform: translateY(-100px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+ 
+
+

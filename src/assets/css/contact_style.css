@@ -1,0 +1,74 @@
+.background-container {
+    min-height: 100vh;
+    background: url('/src/assets/img/danang.png') top center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-container {
+    background-color: #fff;
+    width: 1053px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 50px 60px;
+}
+
+.child-contact-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-header {
+    font-size: 25px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-top: 0;
+}
+
+.contact-group {
+    margin-bottom: 20px;
+}
+
+.contact-label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.contact-input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.contact-input-label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.contact-input {
+    width: 410px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.fixed-width-textarea {
+    resize: vertical;
+}
+
+.send-btn {
+    width: 110px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #00a8a8;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+}
+
+.send-btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
