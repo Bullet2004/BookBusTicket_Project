@@ -16,17 +16,18 @@ body {
     font-size: 16px;
     margin-right: 10px;
     color: #333;
+    font-weight: 600;
   }
 
   #sort-select {
-    width: 200px; /* Chiều rộng của select */
-    padding: 8px 12px; /* Khoảng cách bên trong */
-    font-size: 16px; /* Kích thước chữ */
-    color: #333; /* Màu chữ */
-    background-color: #f9f9f9; /* Màu nền */
-    border: 1px solid #ccc; /* Đường viền */
-    border-radius: 0; /* Không bo góc */
-    cursor: pointer; /* Con trỏ chuột khi hover */
+    width: 200px; 
+    padding: 8px 12px; 
+    font-size: 16px; 
+    color: #333; 
+    background-color: #f9f9f9; 
+    border: 1px solid #ccc; 
+    border-radius: 0; 
+    cursor: pointer; 
   }
   
   .container {

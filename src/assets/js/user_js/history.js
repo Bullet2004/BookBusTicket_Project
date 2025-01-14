@@ -133,10 +133,15 @@ const ticketData = [
   
   
   function cancelTicket(button) {
-    const index = button.getAttribute("data-index"); // Lấy chỉ số thực từ data-index
-    ticketData[index].status = "Đã hủy";
-    sortTickets(); // Refresh table with sorted data
+    const index = button.getAttribute("data-index"); 
+  
+    const confirmCancel = confirm("Bạn có chắc chắn muốn huỷ chuyến?");
+    if (confirmCancel) {
+      ticketData[index].status = "Đã hủy";
+      sortTickets(); 
+    }
   }
+  
   
   
   function sortTickets() {
@@ -147,9 +152,9 @@ const ticketData = [
       const dateB = new Date(b.time);
   
       if (sortValue === "newest") {
-        return dateB - dateA; // Sort from newest to oldest
+        return dateB - dateA; 
       } else if (sortValue === "oldest") {
-        return dateA - dateB; // Sort from oldest to newest
+        return dateA - dateB; 
       }
     });
   
@@ -157,6 +162,6 @@ const ticketData = [
   }
   
   document.addEventListener("DOMContentLoaded", () => {
-    sortTickets(); // Default sort by newest
+    sortTickets(); 
   });
   
