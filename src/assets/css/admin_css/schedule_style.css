@@ -1,0 +1,175 @@
+.add-group {
+    margin-left: 120px;
+    display: flex;
+}
+
+.add-btn {
+    height: 30px;
+    margin-left: 250px;
+    border: none;
+    padding: 0 20px;
+    color: #fff;
+    background-color: #00a8a8;
+}
+
+.add-btn:hover {
+    cursor: pointer;
+    transform: translateY(-1px);
+}
+
+.container>h2 {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.schedule-list {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 120px;
+}
+
+.schedule-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #333;
+    border-radius: 10px;
+    width: 460px;
+    font-size: 15px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+
+.schedule-group {
+    margin-left: 20px;
+}
+
+.schedule-img {
+    width: 120px;
+    height: 80px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.schedule-item label {
+    font-weight: 600;
+}
+
+.schedule-action-group {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.schedule-action-group i {
+    padding: 8px 0;
+    color: rgb(0, 0, 114);
+}
+
+.schedule-action-group i:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.price {
+    margin-left: 50px;
+    font-weight: 600;
+}
+
+.editScheduleModal,
+.addScheduleModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+.editScheduleModal.open,
+.addScheduleModal.open {
+display: flex;
+}
+
+.edit-modal-content,
+.add-modal-content {
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+width: 400px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.edit-modal-content h2,
+.add-modal-content h2 {
+margin-top: 0;
+font-size: 15px;
+color: #333;
+font-weight: 600;
+margin-bottom: 15px;
+}
+
+.edit-modal-content form,
+.add-modal-content form {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.edit-modal-content label,
+.add-modal-content label {
+font-weight: bold;
+font-size: 0.9em;
+}
+
+.edit-modal-content input[type="text"],
+.edit-modal-content input[type="number"],
+.edit-modal-content input[type="file"],
+.edit-modal-content input[type="time"],
+.add-modal-content input[type="text"],
+.add-modal-content input[type="number"],
+.add-modal-content input[type="file"],
+.add-modal-content input[type="time"] {
+padding: 10px;
+font-size: 0.9em;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.edit-modal-content button,
+.add-modal-content button {
+padding: 5px 15px;
+font-size: 1em;
+background-color: #007bff;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.edit-modal-content button:hover,
+.add-modal-content button:hover {
+background-color: #0056b3;
+}
+
+.edit-modal-content .cancel,
+.add-modal-content .cancel {
+background-color: #6c757d;
+}
+
+.edit-modal-content .cancel:hover,
+.add-modal-content .cancel:hover {
+background-color: #5a6268;
+}
+
+.edit-modal-content .actions,
+.add-modal-content .actions {
+display: flex;
+justify-content: flex-end;
+gap: 10px;
+}
