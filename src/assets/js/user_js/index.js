@@ -68,6 +68,14 @@
             busImg.classList.remove("active");
         }
     });
+
+    document.querySelector('#facebook-btn').addEventListener('click', function () {
+        const link = this.querySelector('a'); // "this" ở đây là #facebook-btn
+        if (link) {
+            link.click(); // Kích hoạt sự kiện nhấp vào thẻ <a>
+        }
+    });
+    
     
 
 
