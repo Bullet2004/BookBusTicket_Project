@@ -46,3 +46,33 @@ editModalOverlay.addEventListener('click', (event) => {
 openEditModalButtons.forEach((button) => {
   button.addEventListener('click', openEditModal);
 });
+
+const confirmDeleteModal = document.getElementById("deleteModal");
+const openDeleteModalBtn = document.querySelectorAll('.fa-solid.fa-trash');
+const cancelDeleteBtn = document.getElementById("cancelBtn");
+const confirmDeleteBtn = document.getElementById("confirmDeleteBtn");
+
+// Mở modal khi bấm nút "Xóa"
+openDeleteModalBtn.forEach((button) => {
+  button.addEventListener('click', function(){
+    confirmDeleteModal.style.display = "flex";
+  })
+})
+
+// Đóng modal khi bấm "Hủy"
+cancelDeleteBtn.addEventListener("click", () => {
+  confirmDeleteModal.style.display = "none";
+});
+
+// Xử lý xác nhận xóa
+confirmDeleteBtn.addEventListener("click", () => {
+    console.log("Đã xóa thành công!");
+    confirmDeleteModal.style.display = "none";
+});
+
+// Đóng modal khi bấm ngoài vùng modal
+window.addEventListener("click", (event) => {
+    if (event.target === confirmDeleteModal) {
+      confirmDeleteModal.style.display = "none";
+    }
+});

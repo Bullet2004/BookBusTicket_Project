@@ -45,12 +45,28 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 .chat-header {
+    display: flex;
+    align-items: center;
     background: #007bff;
     color: white;
     padding: 10px;
-    text-align: center;
+    text-align: left;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+}
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.close-chat {
+    margin-left: auto;
+    padding: 5px;
+}
+.close-chat:hover {
+    cursor: pointer;
+    color: #919191;
 }
 .chat-content {
     height: 200px;
@@ -71,7 +87,7 @@ body {
     background: #007bff;
     color: white;
     border: none;
-    padding: 10px;
+    width: 50px;
     cursor: pointer;
 }
 .timestamp {

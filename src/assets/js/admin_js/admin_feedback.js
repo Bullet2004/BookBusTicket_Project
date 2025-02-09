@@ -1,9 +1,25 @@
 function openChat(element, customerName) {
-    document.getElementById('chatBox').style.display = 'block';
-    document.getElementById('chatHeader').innerText = 'Chat với ' + customerName;
-    document.getElementById('chatContent').innerHTML = '<p><strong>' + customerName + ':</strong> Xin chào, tôi cần hỗ trợ!</p>';
+    const chatBox = document.getElementById('chatBox');
+    const chatHeader = document.getElementById('chatHeader');
+    const chatContent = document.getElementById('chatContent');
+
+    chatBox.style.display = 'block';
+
+    chatHeader.innerHTML = `
+        <img src="/src/assets/img/avatar.jfif" alt="Avatar" class="avatar">
+        ${customerName}
+        <i class="fa-solid fa-x close-chat" onclick="closeChat()"></i>
+    `;
+
+    chatContent.innerHTML = `<p><strong>${customerName}:</strong> Xin chào, tôi cần hỗ trợ!</p>`;
+
     element.classList.remove('unread');
 }
+
+function closeChat() {
+    document.getElementById('chatBox').style.display = 'none';
+}
+
 
 function sendMessage() {
     var message = document.getElementById('chatMessage').value;
@@ -14,3 +30,9 @@ function sendMessage() {
         chatContent.scrollTop = chatContent.scrollHeight;
     }
 }
+
+document.getElementById("chatMessage").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        sendMessage();
+    }
+});
