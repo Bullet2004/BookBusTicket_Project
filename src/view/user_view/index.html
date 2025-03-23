@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>User Dashboard - Phúc Nguyên Bus</title>
     <link rel="stylesheet" href="/src/assets/css/common_css/style.css">
     <link rel="stylesheet" href="/src/assets/css/common_css/base.css">
     <link rel="stylesheet" href="/src/assets/font/themify-icons-font/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div id="nav-bar">
@@ -234,8 +233,22 @@
         </div>
     </footer>
     <script src="/src/assets/js/user_js/index.js"></script>
+    <script src="/src/assets/js/common_js/auth.js"></script>
     <script>
+        // Check if user is logged in and is user
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+            if (!currentUser || currentUser.role !== 'user') {
+                window.location.href = '/src/view/common_view/login.html';
+                return;
+            }
+            document.getElementById('userName').textContent = currentUser.username;
+        });
 
+        function logout() {
+            sessionStorage.removeItem('currentUser');
+            window.location.href = '/src/view/common_view/login.html';
+        }
     </script>
 </body>
 </html>

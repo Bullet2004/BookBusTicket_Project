@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Bus Icon -->
+    <path d="M40 60h120v80H40z" fill="#1dbfaf"/>
+    <path d="M50 70h100v40H50z" fill="white"/>
+    <path d="M60 80h20v20H60z" fill="#1dbfaf"/>
+    <path d="M120 80h20v20h-20z" fill="#1dbfaf"/>
+    <circle cx="70" cy="150" r="10" fill="#1dbfaf"/>
+    <circle cx="130" cy="150" r="10" fill="#1dbfaf"/>
+    
+    <!-- Company Name -->
+    <text x="100" y="45" text-anchor="middle" fill="#1dbfaf" font-family="Arial" font-weight="bold" font-size="24">
+        PHÚC NGUYÊN
+    </text>
+    <text x="100" y="65" text-anchor="middle" fill="#1dbfaf" font-family="Arial" font-weight="bold" font-size="16">
+        BUS
+    </text>
+</svg> 
