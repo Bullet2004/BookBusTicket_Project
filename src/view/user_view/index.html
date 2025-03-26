@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Dashboard - Phúc Nguyên Bus</title>
-    <link rel="stylesheet" href="/src/assets/css/common_css/style.css">
+    <link rel="stylesheet" href="/src/assets/css/user_css/style.css">
     <link rel="stylesheet" href="/src/assets/css/common_css/base.css">
     <link rel="stylesheet" href="/src/assets/font/themify-icons-font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -42,6 +42,27 @@
                 <img src="/src/assets/img/thienphu3.jpg" alt="Ảnh 3">
             </div>
         </div>
+
+        <section class="slogan-section">
+            <div class="slogan-content">
+                <h2 class="slogan-title">An toàn - Tiện nghi - Đúng giờ</h2>
+                <p class="slogan-text">Với đội ngũ tài xế chuyên nghiệp, xe mới và hiện đại, chúng tôi cam kết mang đến cho quý khách hàng những chuyến đi thoải mái và an toàn nhất.</p>
+                <div class="slogan-features">
+                    <div class="slogan-feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>An toàn tuyệt đối</span>
+                    </div>
+                    <div class="slogan-feature">
+                        <i class="fas fa-clock"></i>
+                        <span>Đúng giờ</span>
+                    </div>
+                    <div class="slogan-feature">
+                        <i class="fas fa-star"></i>
+                        <span>Chất lượng 5 sao</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <div class="commitment">
             <div class="bus-image">
@@ -110,7 +131,7 @@
             <div class="route-item">
                 <div class="demo-container">
                     <img src="/src/assets/img/danang.png" alt="" class="demo-image">
-                    <span class="from">Bến xe trung tâm- Đà Nẵng</span>
+                    <span class="from">Tuyến xe từ</span>
                     <span class="from-position">Lệ Thuỷ - Quảng Bình</span>
                 </div>
                 <div class="route-detail">
@@ -172,15 +193,15 @@
             <div class="modal-body">
                 <div class="modal-group">
                     <label for="" class="info-label">Số điện thoại</label>
-                    <input type="text" id="phone" class="info-input" placeholder="VD: 0123456789">
-                </div>
-                <div class="modal-group">
-                    <label for="" class="info-label">Họ tên</label>
-                    <input type="text" id="name" class="info-input" placeholder="VD: Phúc Nguyên">
+                    <input type="text" id="phone" class="info-input" value="0123456789" readonly>
                 </div>
                 <div class="modal-group">
                     <label for="" class="info-label">Tuyến xe</label>
                     <input type="text" id="name" value="Lệ Thuỷ -> Đồng Hới" class="info-input" readonly>
+                </div>
+                <div class="modal-group">
+                    <label for="" class="info-label">Số chỗ</label>
+                    <input type="number" id="number" value="number" class="info-input" min="0" max="30" placeholder="VD: 2">
                 </div>
                 <div class="modal-group">
                     <label for="" class="info-label">Giá vé</label>

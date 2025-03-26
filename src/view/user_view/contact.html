@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/src/assets/css/common_css/base.css">
+    <title>Liên hệ - Phúc Nguyên Bus</title>
+    <link rel="stylesheet" href="/src/assets/css/user_css/style.css">
+    <link rel="stylesheet" href="/src/assets/css/common_css/base.css">    
     <link rel="stylesheet" href="/src/assets/css/user_css/contact_style.css">
     <link rel="stylesheet" href="/src/assets/font/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div id="nav-bar">
@@ -18,7 +20,7 @@
                 <a href="/src/view/user_view/introduction.html">Giới thiệu</a>
             </li>
             <li class="nav-item">
-                <a href="#">Liên hệ</a>
+                <a href="/src/view/user_view/contact.html">Liên hệ</a>
             </li>
             <li class="nav-item">
                 <a href="/src/view/user_view/history.html">Lịch sử đặt vé</a>
@@ -33,48 +35,110 @@
             </li>
         </ul>
     </div>
-    <div id="body">
-        <div class="background-container">
-            <div class="contact-container">
-                <div class="child-contact-container left-container">
-                    <h2 class="contact-header">Liên hệ với chúng tôi</h2>
-                    <div class="contact-details">
-                        <div class="contact-group">
-                            <label for="" class="contact-label">Địa chỉ: </label>
-                            <span class="contact-description">Thị trấn Lệ Ninh, Huyện Lệ Thuỷ, Tỉnh Quảng Bình</span>
-                        </div>
-                        <div class="contact-group">
-                            <label for="" class="contact-label">Số điện thoại: </label>
-                            <span class="contact-description">0123456789</span>
-                        </div>
-                        <div class="contact-group">
-                            <label for="" class="contact-label">Email: </label>
-                            <span class="contact-description">buithecuong2004@gmail.com</span>
-                        </div>
+
+    <!-- Contact Header Section -->
+    <section class="contact-header">
+        <div class="contact-header-content">
+            <div class="contact-header-text">
+                <h1>Liên hệ với chúng tôi</h1>
+                <p>Chúng tôi luôn sẵn sàng hỗ trợ và giải đáp mọi thắc mắc của bạn</p>
+                <div class="contact-header-info">
+                    <div class="contact-header-item">
+                        <i class="fas fa-phone"></i>
+                        <span>0123456789</span>
                     </div>
-                </div>
-                <div class="child-contact-container right-container">
-                    <div class="contact-input-group">
-                        <label for="" class="contact-input-label">Họ và tên:</label>
-                        <input type="text" name="" id="" class="contact-input">
+                    <div class="contact-header-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>phucnguyenbus@gmail.com</span>
                     </div>
-                    <div class="contact-input-group">
-                        <label for="" class="contact-input-label">Email:</label>
-                        <input type="text" name="" id="" class="contact-input">
+                    <div class="contact-header-item">
+                        <i class="fas fa-clock"></i>
+                        <span>24/7</span>
                     </div>
-                    <div class="contact-input-group">
-                        <label for="" class="contact-input-label">Số điện thoại:</label>
-                        <input type="text" name="" id="" class="contact-input">
-                    </div>
-                    <div class="contact-input-group">
-                        <label for="" class="contact-input-label">Tin nhắn:</label>
-                        <textarea name="" id="" class="contact-input fixed-width-textarea"></textarea>
-                    </div>
-                    <button class="send-btn">Gửi ngay</button>
                 </div>
             </div>
+            <div class="contact-header-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.197353042045!2d105.78049931540215!3d21.030825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4cd0c66f05%3A0xea31563511af2e54!2zOTcgxJDGsOG7nW5nIEPhuqd1IEdp4bqleSwgUXVhbiBIb2EsIENhaSBMYW0sIEPhuqd1IEdp4bqleSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1647890123456!5m2!1svi!2s" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h2 class="contact-info-title">Thông tin liên hệ</h2>
+                <div class="contact-info-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-info-content">
+                        <h3>Địa chỉ</h3>
+                        <p>123 Đường ABC, Quận 1, TP.HCM</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-info-content">
+                        <h3>Điện thoại</h3>
+                        <p>0123456789</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-info-content">
+                        <h3>Email</h3>
+                        <p>contact@phucnguyenbus.com</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="contact-info-content">
+                        <h3>Giờ làm việc</h3>
+                        <p>Thứ 2 - Chủ nhật: 7:00 - 22:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2 class="form-title">Gửi tin nhắn</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Họ và tên</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Số điện thoại</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Nội dung</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Gửi tin nhắn</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="footer-group">
             <h2 class="footer-header">Cam kết</h2>
@@ -100,8 +164,8 @@
         <div class="footer-group">
             <h2 class="footer-header">Liên hệ</h2>
             <div class="footer-group-child">
-                <label class="footer-label">Số điện thoại: </label class="footer-label">
-                <a href="https://www.facebook.com/thecuong.bui.710" target="_blank">0123456789</a>
+                <label class="footer-label">Số điện thoại: </label>
+                <a href="tel:0123456789">0123456789</a>
             </div>
             <div class="footer-group-child">
                 <label class="footer-label">Facebook: </label>
@@ -110,18 +174,20 @@
         </div>
         <div class="footer-group">
             <h2 class="footer-header">Thanh toán</h2>
-            <img src="/src/assets/img/qr.png" alt="" class="qr-img">
+            <img src="/src/assets/img/qr.png" alt="QR Code thanh toán" class="qr-img">
         </div>
     </footer>
+
+    <script src="/src/assets/js/user_js/contact.js"></script>
     <script>
         document.querySelectorAll('.nav-item').forEach(item => {
-        item.addEventListener('click', function () {
-            const link = this.querySelector('a');
-            if (link) {
-                link.click(); // Kích hoạt sự kiện nhấp vào thẻ <a>
-            }
+            item.addEventListener('click', function () {
+                const link = this.querySelector('a');
+                if (link) {
+                    link.click();
+                }
+            });
         });
-    });
     </script>
 </body>
 </html>

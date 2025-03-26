@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/src/assets/css/common_css/base.css">
+    <title>Giới thiệu - Phúc Nguyên Bus</title>
+    <link rel="stylesheet" href="/src/assets/css/user_css/style.css">
+    <link rel="stylesheet" href="/src/assets/css/common_css/base.css">    
     <link rel="stylesheet" href="/src/assets/css/user_css/intro_style.css">
     <link rel="stylesheet" href="/src/assets/font/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div id="nav-bar">
@@ -15,7 +17,7 @@
                 <a href="/src/view/user_view/index.html">Trang chủ</a>
             </li>
             <li class="nav-item">
-                <a href="#">Giới thiệu</a>
+                <a href="/src/view/user_view/introduction.html">Giới thiệu</a>
             </li>
             <li class="nav-item">
                 <a href="/src/view/user_view/contact.html">Liên hệ</a>
@@ -33,58 +35,73 @@
             </li>
         </ul>
     </div>
-    <div class="intro-background">
-        <h1 class="intro-header">Nhà xe Phúc Nguyên</h1>
-        <div class="intro-description-group">
-            <span class="intro-description">Nhà xe Phúc Nguyên tự hào với chất lượng dịch vụ, tiện nghi và an toàn.</span><br>
-            <span class="intro-description"> Với tài xế đẹp trai cùng với phụ xe chu đáo, nhiệt tình, chúng tôi hy vọng khách hàng sẽ có trải nghiệm tốt nhất.</span>
-        </div>
-    </div>
-    <div class="intro-slider">
-        <div class="intro-slider-container">
-            <div class="intro-slider-group" id="slide-1">
-                <h1 class="intro-slider-header">An toàn được đảm bảo</h1>
-                <span class="intro-slider-description">
-                    Trang web đặt vé xe của chúng tôi cam kết mang đến sự an toàn tuyệt đối cho mỗi hành trình. Tất cả các đối tác vận chuyển đều được chọn lọc kỹ lưỡng, đảm bảo chất lượng xe, đội ngũ tài xế chuyên nghiệp và tuân thủ đầy đủ các tiêu chuẩn an toàn.
-                </span>
-            </div>
-            <div class="intro-slider-group" id="slide-2">
-                <h1 class="intro-slider-header">Hỗ trợ tận tâm</h1>
-                <span class="intro-slider-description">
-                    Đội ngũ hỗ trợ khách hàng của chúng tôi luôn sẵn sàng 24/7 để giải đáp mọi thắc mắc và hỗ trợ bạn trong quá trình đặt vé. Với sự tận tâm và chuyên nghiệp, chúng tôi mang đến trải nghiệm dịch vụ nhanh chóng, tiện lợi và hài lòng.
-                </span>
+
+    <!-- Hero Section -->
+    <section class="intro-hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Nhà xe Phúc Nguyên</h1>
+            <p class="hero-subtitle">Chất lượng dịch vụ, tiện nghi và an toàn</p>
+            <div class="hero-description">
+                <p>Với đội ngũ tài xế chuyên nghiệp và phụ xe chu đáo, nhiệt tình, chúng tôi cam kết mang đến cho quý khách hàng những chuyến đi thoải mái và an toàn nhất.</p>
             </div>
         </div>
-        <div class="slider-dots">
-            <span class="dot active" data-slide="slide-1"></span>
-            <span class="dot" data-slide="slide-2"></span>
-        </div>
-    </div>
-    <div class="reason-details">
-        <h1 class="reason-header">Lý do bạn nên đặt vé tại Phúc Nguyên</h1>
-        <div class="reason-container">
-            <div class="reason-group-row">
-                <div class="reason-group">
-                    <h1 class="reason-overview">Uy tín, chất lượng</h1>
-                    <span class="reason-description">Trang web đặt xe khách cam kết hợp tác với các nhà xe uy tín, đảm bảo đúng giờ, đúng tuyến và chất lượng dịch vụ tốt nhất. Nhà xe được kiểm duyệt kĩ lưỡng trước khi khởi hành, có thông tin minh bạch về giá cả, lộ trình.</span>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="features-container">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
                 </div>
-                <div class="reason-group">
-                    <h1 class="reason-overview">Tiện nghi, thoải mái</h1>
-                    <span class="reason-description">Xe khách được trang bị đầy đủ tiện nghi như ghế ngồi hoặc giường nằm êm ái, điều hòa, wifi miễn phí, ổ cắm sạc, nước uống và chăn mền. Không gian sạch sẽ, hiện đại, giúp hành khách thư giãn trong suốt chuyến đi.</span>
-                </div>
+                <h3>An toàn được đảm bảo</h3>
+                <p>Trang web đặt vé xe của chúng tôi cam kết mang đến sự an toàn tuyệt đối cho mỗi hành trình. Tất cả các đối tác vận chuyển đều được chọn lọc kỹ lưỡng, đảm bảo chất lượng xe, đội ngũ tài xế chuyên nghiệp và tuân thủ đầy đủ các tiêu chuẩn an toàn.</p>
             </div>
-            <div class="reason-group-row">
-                <div class="reason-group">
-                    <h1 class="reason-overview">Đưa đón tận nơi</h1>
-                    <span class="reason-description">Dịch vụ đưa đón tận nơi hỗ trợ hành khách tiết kiệm thời gian và công sức, đặc biệt là với những người ở xa bến xe. Có trung chuyển đón khách từ nhà, khách sạn, hoặc các điểm hẹn trong khu vực gần bến. Điều này rất rất phù hợp cho các chuyến đi gia đình, nhóm bạn, hoặc khách du lịch, giúp chuyến đi trở nên dễ dàng và thuận tiện hơn.</span>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-headset"></i>
                 </div>
-                <div class="reason-group">
-                    <h1 class="reason-overview">Phục vụ khách hàng hết mình</h1>
-                    <span class="reason-description">Đội ngũ nhân viên nhà xe luôn sẵn sàng hỗ trợ khách hàng, từ giải đáp thắc mắc, hướng dẫn đặt vé, đến xử lý các vấn đề phát sinh trong hành trình. Phương châm phục vụ tận tâm, chu đáo đảm bảo hành khách có trải nghiệm tốt nhất và hài lòng với chuyến đi của mình.</span>
-                </div>
+                <h3>Hỗ trợ tận tâm</h3>
+                <p>Đội ngũ hỗ trợ khách hàng của chúng tôi luôn sẵn sàng 24/7 để giải đáp mọi thắc mắc và hỗ trợ bạn trong quá trình đặt vé. Với sự tận tâm và chuyên nghiệp, chúng tôi mang đến trải nghiệm dịch vụ nhanh chóng, tiện lợi và hài lòng.</p>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <h2 class="section-title">Lý do bạn nên đặt vé tại Phúc Nguyên</h2>
+        <div class="reasons-grid">
+            <div class="reason-card">
+                <div class="reason-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Uy tín, chất lượng</h3>
+                <p>Trang web đặt xe khách cam kết hợp tác với các nhà xe uy tín, đảm bảo đúng giờ, đúng tuyến và chất lượng dịch vụ tốt nhất. Nhà xe được kiểm duyệt kĩ lưỡng trước khi khởi hành, có thông tin minh bạch về giá cả, lộ trình.</p>
+            </div>
+            <div class="reason-card">
+                <div class="reason-icon">
+                    <i class="fas fa-couch"></i>
+                </div>
+                <h3>Tiện nghi, thoải mái</h3>
+                <p>Xe khách được trang bị đầy đủ tiện nghi như ghế ngồi hoặc giường nằm êm ái, điều hòa, wifi miễn phí, ổ cắm sạc, nước uống và chăn mền. Không gian sạch sẽ, hiện đại, giúp hành khách thư giãn trong suốt chuyến đi.</p>
+            </div>
+            <div class="reason-card">
+                <div class="reason-icon">
+                    <i class="fas fa-car"></i>
+                </div>
+                <h3>Đưa đón tận nơi</h3>
+                <p>Dịch vụ đưa đón tận nơi hỗ trợ hành khách tiết kiệm thời gian và công sức, đặc biệt là với những người ở xa bến xe. Có trung chuyển đón khách từ nhà, khách sạn, hoặc các điểm hẹn trong khu vực gần bến.</p>
+            </div>
+            <div class="reason-card">
+                <div class="reason-icon">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <h3>Phục vụ khách hàng hết mình</h3>
+                <p>Đội ngũ nhân viên nhà xe luôn sẵn sàng hỗ trợ khách hàng, từ giải đáp thắc mắc, hướng dẫn đặt vé, đến xử lý các vấn đề phát sinh trong hành trình.</p>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="footer-group">
             <h2 class="footer-header">Cam kết</h2>
@@ -110,8 +127,8 @@
         <div class="footer-group">
             <h2 class="footer-header">Liên hệ</h2>
             <div class="footer-group-child">
-                <label class="footer-label">Số điện thoại: </label class="footer-label">
-                <a href="https://www.facebook.com/thecuong.bui.710" target="_blank">0123456789</a>
+                <label class="footer-label">Số điện thoại: </label>
+                <a href="tel:0123456789">0123456789</a>
             </div>
             <div class="footer-group-child">
                 <label class="footer-label">Facebook: </label>
@@ -120,19 +137,21 @@
         </div>
         <div class="footer-group">
             <h2 class="footer-header">Thanh toán</h2>
-            <img src="/src/assets/img/qr.png" alt="" class="qr-img">
+            <img src="/src/assets/img/qr.png" alt="QR Code thanh toán" class="qr-img">
         </div>
     </footer>
+
+    <script src="/src/assets/js/user_js/base.js"></script>
     <script src="/src/assets/js/user_js/intro.js"></script>
     <script>
-          document.querySelectorAll('.nav-item').forEach(item => {
-        item.addEventListener('click', function () {
-            const link = this.querySelector('a');
-            if (link) {
-                link.click(); // Kích hoạt sự kiện nhấp vào thẻ <a>
-            }
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function () {
+                const link = this.querySelector('a');
+                if (link) {
+                    link.click();
+                }
+            });
         });
-    });
     </script>
 </body>
 </html>

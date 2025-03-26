@@ -1,0 +1,679 @@
+/* Modern User Interface Styles */
+:root {
+    --primary-color: #1dbfaf;
+    --secondary-color: #2a9d8f;
+    --accent-color: #ff6b6b;
+    --text-color: #2d3436;
+    --light-gray: #f8f9fa;
+    --border-color: #e9ecef;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --gradient: linear-gradient(135deg, #1dbfaf 0%, #2a9d8f 100%);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+#nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 0.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.nav-list-items {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-item a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: var(--primary-color);
+}
+
+.nav-item a:hover::after {
+    width: 100%;
+}
+
+/* Slider Section */
+/* Tổng quan slider */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    display: flex; 
+    width: 100%; 
+    transition: transform 1s ease; 
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Slogan Section */
+.slogan-section {
+    background: var(--gradient);
+    padding: 2rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.slogan-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/src/assets/img/pattern.png') repeat;
+    opacity: 0.1;
+}
+
+.slogan-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.slogan-title {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slogan-text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.slogan-features {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.slogan-feature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+}
+
+.slogan-feature i {
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.8rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.slogan-feature:hover i {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.slogan-feature span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Commitment Section */
+.commitment {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background: white;
+    margin: 4rem 0;
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+    max-width: 1200px;
+    margin: 4rem auto;
+}
+
+.bus-image {
+    flex: 1;
+    text-align: center;
+    padding: 2rem;
+}
+
+.bus-img {
+    max-width: 100%;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+}
+
+.commitment-detail {
+    flex: 1;
+    padding: 2rem;
+}
+
+.commitment-header {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.commitment-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--gradient);
+    border-radius: 3px;
+}
+
+.commitment-list {
+    list-style: none;
+    padding: 0;
+}
+
+.commitment-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1.2rem;
+    background: var(--light-gray);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.commitment-item:hover {
+    transform: translateX(10px);
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.commitment-icon {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-right: 1.2rem;
+    background: rgba(29, 191, 175, 0.1);
+    padding: 0.8rem;
+    border-radius: 50%;
+}
+
+/* Routes Section */
+.title {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin: 4rem 0;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--gradient);
+    border-radius: 3px;
+}
+
+.list-routes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.route-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.route-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.demo-container {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.demo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.route-item:hover .demo-image {
+    transform: scale(1.05);
+}
+
+.from {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.from-position {
+    position: absolute;
+    top: 3.05rem;
+    left: 2rem;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.route-detail {
+    padding: 1.2rem;
+}
+
+.destination-and-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.destination {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.price {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.during {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.book-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+    background: #1a9f8f;
+}
+
+/* Floating Buttons */
+.floating-buttons {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 1000;
+}
+
+.floating-button {
+    position: relative;
+    background: #1dbfaf;
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s, width 0.3s;
+    overflow: visible;
+}
+
+.floating-button:hover {
+    background: #1a9f8f;
+    width: 200px;
+    border-radius: 25px;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.tooltip {
+    position: absolute;
+    right: 70px;
+    color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.floating-button:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-10px);
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .modal.open {
+    display: flex;
+  }
+  
+  .modal-container {
+    background: #fff;
+    width: 900px;
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease 0.3s;
+  }
+  
+  .modal-header {
+    background-color: #009688;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+  }
+  
+  .ticket-icon {
+    margin-right: 16px;
+  }
+  
+  .modal-close {
+    position: absolute;
+    padding: 10px;
+    top: 0;
+    right: 0;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .modal-close:hover {
+    color: #ccc;
+    cursor: pointer;
+  }
+  
+  .modal-group {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info-label {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  
+  .info-input {
+    padding: 10px;
+    font-size: 15px;
+  }
+  
+  .ok-btn {
+    border: none;
+    margin: 10px 20px;
+    padding: 18px;
+    width: 860px;
+    background: #009688;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  
+  .ok-btn:hover {
+    opacity: 0.8;
+  }
+  
+  @keyframes modalFadeIn {
+    from {
+      transform: translateY(-100px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  .floating-button:nth-child(1) {
+    position: fixed;
+    bottom: 200px;
+    right: 20px;
+  }
+  .floating-button:nth-child(2) {
+    position: fixed;
+    bottom: 140px;
+    right: 20px;
+  }
+
+  .floating-button i {
+    font-size: 24px;
+    transition: margin 0.3s;
+  }
+  .floating-button span {
+    font-size: 16px;
+  }
+  .tooltip {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, transform 0.3s;
+    white-space: nowrap;
+    transform: scaleX(0);
+    transform-origin: left;
+    position: absolute;
+    left: 60px;
+    color: white;
+    border-radius: 5px;
+  }
+  .floating-button:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleX(1);
+  }
+  
+  
+  #phone-btn i {
+    animation: rotate-shake 1s ease-in-out infinite;
+  }
+
+  
+  @keyframes rotate-shake {
+    0%, 100% { transform: rotate(0); }
+    10% { transform: rotate(-10deg); }
+    20% { transform: rotate(10deg); }
+    30% { transform: rotate(-10deg); }
+    40% { transform: rotate(10deg); }
+    50% { transform: rotate(0); }
+  }
+  
+.info-label {
+    color: #666;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.info-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(29, 191, 175, 0.1);
+}
+
+.ok-btn {
+    background: var(--gradient);
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ok-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(29, 191, 175, 0.3);
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-header {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.footer-group-child {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.footer-group-child a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-group-child a:hover {
+    color: var(--primary-color);
+}
+
+.check-icon {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.qr-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.qr-img:hover {
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}

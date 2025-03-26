@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lịch sử đặt vé xe khách</title>
-  <link rel="stylesheet" href="/src/assets/font/themify-icons-font/themify-icons/themify-icons.css">    
-  <link rel="stylesheet" href="/src/assets/css/user_css/history_style.css">
-  <link rel="stylesheet" href="/src/assets/css/common_css/base.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch sử đặt vé - Phúc Nguyên Bus</title>
+    <link rel="stylesheet" href="/src/assets/css/user_css/style.css">
+    <link rel="stylesheet" href="/src/assets/css/common_css/base.css">
+    <link rel="stylesheet" href="/src/assets/css/user_css/history_style.css">
+    <link rel="stylesheet" href="/src/assets/font/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div id="nav-bar">
@@ -21,7 +23,7 @@
                 <a href="/src/view/user_view/contact.html">Liên hệ</a>
             </li>
             <li class="nav-item">
-                <a href="#">Lịch sử đặt vé</a>
+                <a href="/src/view/user_view/history.html">Lịch sử đặt vé</a>
             </li>
         </ul>
         <ul class="nav-list-items">
@@ -33,32 +35,186 @@
             </li>
         </ul>
     </div>
-    <div class="container">
-        <h1>Lịch sử đặt vé xe khách</h1>
-        <div class="sort-container">
-          <label for="sort-select">Sắp xếp:</label>
-          <select id="sort-select" onchange="sortTickets()">
-            <option value="newest">Gần đây nhất</option>
-            <option value="oldest">Cũ nhất</option>
-          </select>
+
+    <!-- History Section -->
+    <section class="history-section">
+        <div class="history-container">
+            <div class="history-header">
+                <h2>Lịch sử đặt vé</h2>
+                <p>Xem lại tất cả các vé xe khách bạn đã đặt và quản lý chúng một cách dễ dàng</p>
+            </div>
+
+            <!-- Filter Container -->
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="status-filter">Trạng thái:</label>
+                    <select id="status-filter" class="filter-select">
+                        <option value="all">Tất cả</option>
+                        <option value="completed">Đã hoàn thành</option>
+                        <option value="pending">Chờ thanh toán</option>
+                        <option value="cancelled">Đã hủy</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="time-filter">Thời gian:</label>
+                    <div class="time-input-group">
+                        <input type="time" id="time-from" class="time-input" placeholder="Từ">
+                        <span class="time-separator">-</span>
+                        <input type="time" id="time-to" class="time-input" placeholder="Đến">
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label for="sort-filter">Sắp xếp:</label>
+                    <select id="sort-filter" class="filter-select">
+                        <option value="newest">Mới nhất</option>
+                        <option value="oldest">Cũ nhất</option>
+                        <option value="price-high">Giá cao đến thấp</option>
+                        <option value="price-low">Giá thấp đến cao</option>
+                    </select>
+                </div>
+                <button class="filter-btn">
+                    <i class="fas fa-filter"></i> Lọc
+                </button>
+            </div>
+
+            <!-- History Grid -->
+            <div class="history-grid">
+                <!-- History Card 1 -->
+                <div class="history-card">
+                    <div class="history-card-header">
+                        <h3>Hà Nội - Hải Phòng</h3>
+                        <p>Mã vé: #HNHP123456</p>
+                    </div>
+                    <div class="history-card-body">
+                        <div class="history-info">
+                            <div class="history-info-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>20/03/2024</span>
+                            </div>
+                            <div class="history-info-item">
+                                <i class="fas fa-clock"></i>
+                                <span>08:00 - 10:30</span>
+                            </div>
+                            <div class="history-info-item">
+                                <i class="fas fa-user"></i>
+                                <span>2 người</span>
+                            </div>
+                            <div class="history-info-item">
+                                <i class="fas fa-chair"></i>
+                                <span>Ghế: 12, 13</span>
+                            </div>
+                        </div>
+                        <div class="history-status status-completed">
+                            <i class="fas fa-check-circle"></i> Đã hoàn thành
+                        </div>
+                    </div>
+                    <div class="history-card-footer">
+                        <div class="history-price">
+                            Tổng tiền: <span>400.000đ</span>
+                        </div>
+                        <div class="history-actions">
+                            <button class="history-btn history-btn-primary">
+                                <i class="fas fa-download"></i> Tải vé
+                            </button>
+                            <button class="history-btn history-btn-secondary">
+                                <i class="fas fa-star"></i> Đánh giá
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- History Card 2 -->
+                <div class="history-card">
+                    <div class="history-card-header">
+                        <h3>Hồ Chí Minh - Đà Lạt</h3>
+                        <p>Mã vé: #HCMDL789012</p>
+                    </div>
+                    <div class="history-card-body">
+                        <div class="history-info">
+                            <div class="history-info-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>25/03/2024</span>
+                            </div>
+                            <div class="history-info-item">
+                                <i class="fas fa-clock"></i>
+                                <span>22:00 - 06:00</span>
+                            </div>
+                            <div class="history-info-item">
+                                <i class="fas fa-user"></i>
+                                <span>1 người</span>
+                            </div>
+                            <div class="history-info-item">
+                                <i class="fas fa-chair"></i>
+                                <span>Ghế: 5</span>
+                            </div>
+                        </div>
+                        <div class="history-status status-pending">
+                            <i class="fas fa-clock"></i> Chờ thanh toán
+                        </div>
+                    </div>
+                    <div class="history-card-footer">
+                        <div class="history-price">
+                            Tổng tiền: <span>250.000đ</span>
+                        </div>
+                        <div class="history-actions">
+                            <button class="history-btn history-btn-primary">
+                                <i class="fas fa-credit-card"></i> Thanh toán
+                            </button>
+                            <button class="history-btn history-btn-secondary">
+                                <i class="fas fa-times"></i> Hủy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- History Card 3 -->
+                <div class="history-card">
+                    <div class="history-card-header">
+                        <h3>Đà Nẵng - Huế</h3>
+                        <p>Mã vé: #DNH123456</p>
+                    </div>
+                    <div class="history-card-body">
+                        <div class="history-info">
+                            <div class="history-info-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>15/03/2024</span>
+                            </div>
+                            <div class="history-info-item">
+                                <i class="fas fa-clock"></i>
+                                <span>14:00 - 16:30</span>
+                            </div>
+                            <div class="history-info-item">
+                                <i class="fas fa-user"></i>
+                                <span>3 người</span>
+                            </div>
+                            <div class="history-info-item">
+                                <i class="fas fa-chair"></i>
+                                <span>Ghế: 8, 9, 10</span>
+                            </div>
+                        </div>
+                        <div class="history-status status-cancelled">
+                            <i class="fas fa-times-circle"></i> Đã hủy
+                        </div>
+                    </div>
+                    <div class="history-card-footer">
+                        <div class="history-price">
+                            Tổng tiền: <span>450.000đ</span>
+                        </div>
+                        <div class="history-actions">
+                            <button class="history-btn history-btn-primary">
+                                <i class="fas fa-redo"></i> Đặt lại
+                            </button>
+                            <button class="history-btn history-btn-secondary">
+                                <i class="fas fa-trash"></i> Xóa
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <table id="ticket-history">
-          <thead>
-            <tr>
-              <th>STT</th>
-              <th>Loại vé</th>
-              <th>Giá vé</th>
-              <th>Thời gian đặt</th>
-              <th>Trạng thái</th>
-              <th>Hành động</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Data will be injected here by JavaScript -->
-          </tbody>
-        </table>
-      </div>
-      <footer>
+    </section>
+
+    <footer>
         <div class="footer-group">
             <h2 class="footer-header">Cam kết</h2>
             <div class="footer-group-child">
@@ -83,8 +239,8 @@
         <div class="footer-group">
             <h2 class="footer-header">Liên hệ</h2>
             <div class="footer-group-child">
-                <label class="footer-label">Số điện thoại: </label class="footer-label">
-                <a href="https://www.facebook.com/thecuong.bui.710" target="_blank">0123456789</a>
+                <label class="footer-label">Số điện thoại: </label>
+                <a href="tel:0123456789">0123456789</a>
             </div>
             <div class="footer-group-child">
                 <label class="footer-label">Facebook: </label>
@@ -93,9 +249,20 @@
         </div>
         <div class="footer-group">
             <h2 class="footer-header">Thanh toán</h2>
-            <img src="/src/assets/img/qr.png" alt="" class="qr-img">
+            <img src="/src/assets/img/qr.png" alt="QR Code thanh toán" class="qr-img">
         </div>
     </footer>
-  <script src="/src/assets/js/user_js/history.js"></script>
+
+    <script src="/src/assets/js/user_js/history.js"></script>
+    <script>
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function () {
+                const link = this.querySelector('a');
+                if (link) {
+                    link.click();
+                }
+            });
+        });
+    </script>
 </body>
 </html>

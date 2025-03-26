@@ -12,7 +12,7 @@ html, body {
     position: fixed; 
     top: 0; 
     left: 0; 
-    z-index: 1000; 
+    z-index: 100; 
     width: 100%;
     background-color: #228686;
     display: flex;
@@ -22,13 +22,12 @@ html, body {
 
 .nav-list-items {
     padding-left: 0;
-    margin: 0;
+    margin-left: 20px;
 }
 
 .nav-item {
     display: inline-block;
     list-style: none;
-    padding: 14px 16px;
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -40,42 +39,41 @@ html, body {
 }
 
 .nav-item:hover {
-    background-color: #239696;
     cursor: pointer;
 }
 
 footer {
-    background: #fff7f5;
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 400px;
-  }
+  background: #faeeeb;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 400px;
+}
 
-  .footer-group {
-    display: flex;
-    flex-direction: column;
-  }
+.footer-group {
+  display: flex;
+  flex-direction: column;
+}
 
-  .footer-header {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+.footer-header {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
-  .footer-group-child {
-    display: flex;
-    align-items: center; 
-    margin-bottom: 5px; 
-  }
+.footer-group-child {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 5px; 
+}
 
-  .check-icon {
-    margin-right: 5px;
-  }
+.check-icon {
+  margin-right: 5px;
+}
 
-  .footer-label {
-    margin-right: 5px;
-  }
+.footer-label {
+  margin-right: 5px;
+}
 
-  .qr-img {
-    width: 90px;
-    height: 90px;
-  }
+.qr-img {
+  width: 90px;
+  height: 90px;
+}
