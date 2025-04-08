@@ -1,211 +1,259 @@
+h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #2563eb;
+    border-radius: 2px;
+}
+
+
 .add-group {
-    margin-left: 120px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: var(--card-shadow);
+}
+
+.add-group h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--sidebar-bg);
+    margin: 0;
 }
 
 .add-btn {
-    height: 30px;
-    margin-left: 250px;
+    background-color: var(--primary-color);
+    color: white;
     border: none;
-    padding: 0 20px;
-    color: #fff;
-    background-color: #00a8a8;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .add-btn:hover {
-    cursor: pointer;
-    transform: translateY(-1px);
-}
-
-.container>h2 {
-    font-size: 28px;
-    font-weight: 500;
+    background-color: var(--secondary-color);
 }
 
 .schedule-list {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 120px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
 }
 
 .schedule-item {
-    display: flex;
-    align-items: center;
-    border: 1px solid #333;
-    border-radius: 10px;
-    width: 460px;
-    font-size: 15px;
-    margin-right: 50px;
-    margin-bottom: 30px;
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
 }
 
-.schedule-group {
-    margin-left: 20px;
+.schedule-item:hover {
+    transform: translateY(-5px);
 }
 
 .schedule-img {
-    width: 120px;
-    height: 80px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
-.schedule-item label {
+.schedule-group {
+    padding: 1.5rem;
+}
+
+.schedule-start-group, .end-group {
+    margin-bottom: 0.75rem;
+}
+
+.schedule-start-label, .schedule-end-label {
+    display: block;
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 0.25rem;
+}
+
+.schedule-start-postion, .schedule-end-position {
+    font-weight: 500;
+    color: var(--sidebar-bg);
+}
+
+.time-price-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #64748b;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.price {
+    color: var(--primary-color);
     font-weight: 600;
 }
 
 .schedule-action-group {
-    margin-left: 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #e2e8f0;
 }
 
 .schedule-action-group i {
-    padding: 8px 0;
-    color: rgb(0, 0, 114);
-}
-
-.schedule-action-group i:hover {
-    opacity: 0.8;
     cursor: pointer;
+    color: #64748b;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
 }
 
-.price {
-    margin-left: 50px;
-    font-weight: 600;
+.schedule-action-group i.fa-pen:hover {
+    color: var(--primary-color);
 }
 
-.editScheduleModal,
-.addScheduleModal {
+.schedule-action-group i.fa-trash:hover {
+    color: var(--danger-color);
+}
+
+/* Modal Styles */
+.addScheduleModal, .editScheduleModal, #deleteModal {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-  }
-
-.editScheduleModal.open,
-.addScheduleModal.open {
-display: flex;
-}
-
-.edit-modal-content,
-.add-modal-content {
-background-color: #fff;
-padding: 20px;
-border-radius: 8px;
-width: 400px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.edit-modal-content h2,
-.add-modal-content h2 {
-margin-top: 0;
-font-size: 15px;
-color: #333;
-font-weight: 600;
-margin-bottom: 15px;
-}
-
-.edit-modal-content form,
-.add-modal-content form {
-display: flex;
-flex-direction: column;
-gap: 10px;
-}
-
-.edit-modal-content label,
-.add-modal-content label {
-font-weight: bold;
-font-size: 0.9em;
-}
-
-.edit-modal-content input[type="text"],
-.edit-modal-content input[type="number"],
-.edit-modal-content input[type="file"],
-.edit-modal-content input[type="time"],
-.add-modal-content input[type="text"],
-.add-modal-content input[type="number"],
-.add-modal-content input[type="file"],
-.add-modal-content input[type="time"] {
-padding: 10px;
-font-size: 0.9em;
-border: 1px solid #ccc;
-border-radius: 5px;
-}
-
-.edit-modal-content button,
-.add-modal-content button {
-padding: 5px 15px;
-font-size: 1em;
-background-color: #007bff;
-color: #fff;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-transition: background-color 0.3s ease;
-}
-
-.edit-modal-content button:hover,
-.add-modal-content button:hover {
-background-color: #0056b3;
-}
-
-.edit-modal-content .cancel,
-.add-modal-content .cancel {
-background-color: #6c757d;
-}
-
-.edit-modal-content .cancel:hover,
-.add-modal-content .cancel:hover {
-background-color: #5a6268;
-}
-
-.edit-modal-content .actions,
-.add-modal-content .actions {
-display: flex;
-justify-content: flex-end;
-gap: 10px;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
     align-items: center;
-}
-.modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 300px;
+    justify-content: center;
 }
 
-button {
-    padding: 5px 10px;
-    margin: 5px;
+.addScheduleModal.open, .editScheduleModal.open {
+    display: flex;
+}
+
+.add-modal-content, .edit-modal-content, .modal-content {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--card-shadow);
+    position: relative;
+}
+
+.add-modal-content h2, .edit-modal-content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--sidebar-bg);
+    margin-bottom: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    font-weight: 500;
+    color: #64748b;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="time"],
+input[type="file"] {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="time"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.actions, .modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.cancel, .btn-cancel {
+    background-color: #e2e8f0;
+    color: #64748b;
     border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
     cursor: pointer;
-    border-radius: 5px;
+    transition: all 0.3s ease;
 }
+
+.cancel:hover, .btn-cancel:hover {
+    background-color: #cbd5e1;
+}
+
+button[type="submit"], .btn-delete {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--secondary-color);
+}
+
 .btn-delete {
-    background: red;
-    color: white;
+    background-color: var(--danger-color);
 }
-.btn-cancel {
-    background: gray;
-    color: white;
+
+.btn-delete:hover {
+    background-color: #dc2626;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        min-height: auto;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    .schedule-list {
+        grid-template-columns: 1fr;
+    }
 }
