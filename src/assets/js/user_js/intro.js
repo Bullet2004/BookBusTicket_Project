@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const visibleHeight = Math.min(elementBottom, windowHeight) - Math.max(elementTop, 0);
         const visibilityRatio = visibleHeight / elementHeight;
         
-        return visibilityRatio >= 0.67; // 2/3 = 0.67
+        return visibilityRatio >= 0.5; // 2/3 = 0.67
     }
 
     // Function to handle scroll animation

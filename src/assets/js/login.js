@@ -12,8 +12,49 @@ const users = [
     }
 ];
 
-// Handle login form submission
+// Form validation
+function validateForm() {
+    const password = document.getElementById('password');
+    const formMessage = password.parentElement.nextElementSibling;
+    let isValid = true;
+
+    // Password validation
+    if (password.value.length < 6) {
+        formMessage.textContent = 'Mật khẩu phải có ít nhất 6 ký tự';
+        isValid = false;
+    } else {
+        formMessage.textContent = '';
+    }
+
+    return isValid;
+}
+
+// Add event listeners
 document.addEventListener('DOMContentLoaded', function() {
+    const passwordInput = document.getElementById('password');
+    const togglePassword = document.querySelector('.toggle-password');
+    const form = document.querySelector('form');
+
+    // Toggle password visibility
+    if (togglePassword) {
+        togglePassword.addEventListener('click', function() {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            this.classList.toggle('fa-eye');
+            this.classList.toggle('fa-eye-slash');
+        });
+    }
+
+    // Form submission
+    form.addEventListener('submit', function(e) {
+        if (!validateForm()) {
+            e.preventDefault();
+        }
+    });
+
+    // Real-time validation
+    passwordInput.addEventListener('blur', validateForm);
+
     const loginForm = document.querySelector('.form');
     if (loginForm) {
         loginForm.addEventListener('submit', function(e) {
@@ -40,17 +81,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             } else {
                 // Show error message
-                const errorMessage = document.createElement('div');
-                errorMessage.className = 'form-message';
-                errorMessage.textContent = 'Invalid username or password';
-                
-                // Remove any existing error message
-                const existingError = loginForm.querySelector('.form-message');
-                if (existingError) {
-                    existingError.remove();
-                }
-                
-                loginForm.appendChild(errorMessage);
+                const password = document.getElementById('password');
+                const formMessage = password.parentElement.nextElementSibling;
+                formMessage.textContent = 'Tên đăng nhập hoặc mật khẩu không chính xác';
+
             }
         });
     }

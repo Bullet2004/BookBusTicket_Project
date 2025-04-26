@@ -1,26 +1,69 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const dotsContainer = document.querySelector('.slider-dots');
+    
+    let currentSlide = 0;
+    const slideCount = slides.length;
 
-    const sliderWrapper = document.querySelector(".slider-wrapper");
-    const images = document.querySelectorAll(".slider img");
-    let currentIndex = 0; // Chỉ số ảnh hiện tại
-    const totalImages = images.length;
+    // Create dots
+    slides.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+    });
 
-    function showNextImage() {
-        currentIndex = (currentIndex + 1) % totalImages; // Chuyển đến ảnh tiếp theo
-        const offset = -currentIndex * 100; // Tính khoảng cách dịch chuyển
-        sliderWrapper.style.transform = `translateX(${offset}%)`;
+    const dots = document.querySelectorAll('.dot');
+
+    function updateSlides() {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
     }
 
-    // Tự động chuyển ảnh mỗi 3 giây
-    setInterval(showNextImage, 3000);
+    function goToSlide(index) {
+        currentSlide = index;
+        updateSlides();
+    }
 
-    document.querySelectorAll('.nav-item').forEach(item => {
-        item.addEventListener('click', function () {
-            const link = this.querySelector('a');
-            if (link) {
-                link.click(); // Kích hoạt sự kiện nhấp vào thẻ <a>
-            }
-        });
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slideCount;
+        updateSlides();
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+        updateSlides();
+    }
+
+    // Event listeners
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+
+    // Auto slide
+    let slideInterval = setInterval(nextSlide, 5000);
+
+    // Pause auto slide on hover
+    const sliderContainer = document.querySelector('.slider-container');
+    sliderContainer.addEventListener('mouseenter', () => {
+        clearInterval(slideInterval);
     });
+
+    sliderContainer.addEventListener('mouseleave', () => {
+        slideInterval = setInterval(nextSlide, 5000);
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') prevSlide();
+        if (e.key === 'ArrowRight') nextSlide();
+    });
+}); 
     
 
     const bookBtns = document.querySelectorAll(".book-btn");

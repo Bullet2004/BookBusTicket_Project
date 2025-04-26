@@ -3,45 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Dashboard - Phúc Nguyên Bus</title>
+    <title>Trang chủ - Phúc Nguyên Bus</title>
     <link rel="stylesheet" href="/src/assets/css/user_css/style.css">
-    <link rel="stylesheet" href="/src/assets/css/common_css/base.css">
     <link rel="stylesheet" href="/src/assets/font/themify-icons-font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="/src/assets/img/logo.svg">
 </head>
 <body>
-    <div id="nav-bar">
-        <ul class="nav-list-items">
-            <li class="nav-item">
-                <a href="#">Trang chủ</a>
-            </li>
-            <li class="nav-item">
-                <a href="/src/view/user_view/introduction.html">Giới thiệu</a>
-            </li>
-            <li class="nav-item">
-                <a href="/src/view/user_view/contact.html">Liên hệ</a>
-            </li>
-            <li class="nav-item">
-                <a href="/src/view/user_view/history.html">Lịch sử đặt vé</a>
-            </li>
-        </ul>
-        <ul class="nav-list-items">
-            <li class="nav-item">
-                <a href="/src/view/common_view/login.html" target="_blank">Đăng nhập</a>
-            </li>
-            <li class="nav-item">
-                <a href="/src/view/common_view/signup.html" target="_blank">Đăng ký</a>
-            </li>
-        </ul>
-    </div>
-    <div id="body">
-        <div id="slider" class="slider">
-            <div class="slider-wrapper">
-                <img src="/src/assets/img/thienphu1.jpg" alt="Ảnh 1">
-                <img src="/src/assets/img/thienphu2.jpg" alt="Ảnh 2">
-                <img src="/src/assets/img/thienphu3.jpg" alt="Ảnh 3">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Phuc Nguyen</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./index.html" class="active">Trang chủ</a></li>
+                <li><a href="./introduction.html">Giới thiệu</a></li>
+                <li><a href="./contact.html">Liên hệ</a></li>
+                <li><a href="./history.html">Lịch sử đặt vé</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="../common_view/login.html" class="login-btn">Đăng nhập</a>
+                <a href="../common_view/signup.html" class="signup-btn">Đăng ký</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide active">
+                <img src="/src/assets/img/thienphu2.jpg" alt="Luxury Bus Interior">
+                <div class="slide-content">
+                    <h2>Du lịch thoải mái</h2>
+                    <p>Trải nghiệm với không gian cùng nội thất sang trọng của chúng tôi</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="/src/assets/img/thienphu1.jpg" alt="Night Bus Service">
+                <div class="slide-content">
+                    <h2>Dịch vụ hỗ trợ 24/7</h2>
+                    <p>Du lịch bất cứ lúc nào với lịch trình thuận tiện</p>
+                </div>
             </div>
         </div>
+        <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+        <div class="slider-dots"></div>
+    </div>
+    <div id="body">>
 
         <section class="slogan-section">
             <div class="slogan-content">
@@ -163,6 +171,24 @@
                     <button  class="book-btn">Đặt vé</button>
                 </div>
             </div>
+            <div class="route-item">
+                <div class="demo-container">
+                    <img src="/src/assets/img/danang.png" alt="" class="demo-image">
+                    <span class="from">Tuyến xe từ</span>
+                    <span class="from-position">Lệ Thuỷ - Quảng Bình</span>
+                </div>
+                <div class="route-detail">
+                    <div class="destination-and-price">
+                        <span class="destination">Lệ Thuỷ - Quảng Bình</span>
+                        <span class="price">170.000đ</span>
+                    </div>
+                    <span class="during">
+                        <i class="ti-timer"></i>
+                        400km - 4 giờ</span>
+                    
+                    <button  class="book-btn">Đặt vé</button>
+                </div>
+            </div>  
         </div>
     </div>
 
@@ -215,42 +241,56 @@
             </div>
         </div>
     </div>
-    <footer>
-        <div class="footer-group">
-            <h2 class="footer-header">Cam kết</h2>
-            <div class="footer-group-child">
-                <span> 
-                    <i class="ti-check check-icon"></i>
-                    Uy tín
-                </span>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Cam kết</h3>
+                <ul>
+                    <li>
+                        <i class="ti-check check-icon"></i>
+                        Uy tín
+                    </li>
+                    <li>
+                        <i class="ti-check check-icon"></i>
+                        Chất lượng
+                    </li>
+                    <li>
+                        <i class="ti-check check-icon"></i>
+                        Tận tình
+                    </li>
+                </ul>
             </div>
-            <div class="footer-group-child">
-                <span> 
-                    <i class="ti-check check-icon"></i>
-                    Chất lượng
-                </span>
+            <div class="footer-section">
+                <h3>Truy cập</h3>
+                <ul>
+                    <li><a href="#">Đặt vé</a></li>
+                    <li><a href="#">Lịch trình</a></li>
+                    <li><a href="#">Tuyến đường</a></li>
+                    <li><a href="#">Các câu hỏi thường gặp</a></li>
+                </ul>
             </div>
-            <div class="footer-group-child">
-                <span> 
-                    <i class="ti-check check-icon"></i>
-                    Thoải mái như ở nhà
-                </span>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-phone"></i> 0949397986</li>
+                    <li><i class="fas fa-envelope"></i> info@phucnguyenbus.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Nghệ An - Hà Tĩnh - Lệ Thuỷ</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Theo dõi chúng tôi</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-zalo"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="qr-code">
+                    <img src="/src/assets/img/qr.png" alt="Zalo QR Code">
+                </div>
             </div>
         </div>
-        <div class="footer-group">
-            <h2 class="footer-header">Liên hệ</h2>
-            <div class="footer-group-child">
-                <label class="footer-label">Số điện thoại: </label class="footer-label">
-                <a href="https://www.facebook.com/thecuong.bui.710" target="_blank">0123456789</a>
-            </div>
-            <div class="footer-group-child">
-                <label class="footer-label">Facebook: </label>
-                <a href="https://www.facebook.com/thecuong.bui.710" target="_blank">Bùi Thế Cường</a>
-            </div>
-        </div>
-        <div class="footer-group">
-            <h2 class="footer-header">Thanh toán</h2>
-            <img src="/src/assets/img/qr.png" alt="" class="qr-img">
+        <div class="footer-bottom">
+            <p>&copy; 2025 Phuc Nguyen Bus. All rights reserved.</p>
         </div>
     </footer>
     <script src="/src/assets/js/user_js/index.js"></script>

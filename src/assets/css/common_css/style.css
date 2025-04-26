@@ -4,77 +4,6 @@ html, body {
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
 }
-#body {
-  margin-bottom: 50px;
-}
-
-.commitment {
-  display: flex;
-}
-
-.bus-image {
-  width: 850px;
-}
-
-.bus-img {
-  margin: 60px 50px;
-  position: relative;
-  left: -800px; /* Ẩn xe ban đầu */
-  transition: margin-left 2s ease-out; /* Hiệu ứng chuyển động mượt */
-}
-
-.bus-img.active {
-  margin-left: 850px; /* Di chuyển xe sang phải khi cuộn */
-}
-
-.commitment-detail {
-  margin-top: 50px;
-}
-
-.commitment-header {
-  color: #fb9f1d;
-}
-
-.commitment-list {
-  margin-top: 30px;
-  margin-left: -30px;
-}
-
-.commitment-item {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  font-size: 25px;
-  margin-bottom: 30px;
-  font-weight: 500;
-  color: #0c6a60;
-}
-
-.commitment-icon {
-  font-size: 30px;
-  margin-right: 15px;
-}
-
-
-/* Tổng quan slider */
-.slider {
-    position: relative;
-    width: 100%;
-    height: 100vh; 
-    overflow: hidden;
-}
-
-.slider-wrapper {
-    display: flex; 
-    width: 100%; 
-    transition: transform 1s ease; 
-}
-
-.slider img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-}
 
 .main {
   min-height: 100vh;
@@ -287,7 +216,7 @@ html, body {
 .form-message {
   color: #f33a58;
   font-size: 12px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .form-group.invalid .form-control {
