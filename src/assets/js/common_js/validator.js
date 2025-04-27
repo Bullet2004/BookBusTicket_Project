@@ -13,9 +13,6 @@ function Validator(formSelector) {
 
     var formRules = {};
 
-    /*
-        Quy uoc tao rule: Co loi thi return 'errorMessage'
-    */ 
     var validatorRules = {
         required: function (value) {
             return value ? undefined : 'Vui lòng nhập trường này';
@@ -36,7 +33,6 @@ function Validator(formSelector) {
         }
     };
 
-    // Lấy ra form element trong dom theo 'formSelector'
     var formElement = document.querySelector(formSelector);
     
     if (formElement) {
@@ -67,7 +63,6 @@ function Validator(formSelector) {
                 }
             }
 
-            // Lắng nghe sự kiện để validate (blur, change...)
 
             input.onblur = handleValidate;
             input.oninput = handleClearError;
@@ -82,7 +77,6 @@ function Validator(formSelector) {
                 if(errorMessage) break;
             }
 
-            // Nếu có lỗi thì hiển thị lỗi ra UI
             if (errorMessage) {
                 var formGroup = getParent(event.target, '.form-group');
                 if(formGroup) {
@@ -97,7 +91,6 @@ function Validator(formSelector) {
             return !errorMessage;
         }
 
-        // Clear error
         function handleClearError(event) {
             var formGroup = getParent(event.target, '.form-group');
             if(formGroup.classList.contains('invalid')) {
@@ -110,7 +103,6 @@ function Validator(formSelector) {
         }
     }
 
-    //Xử lý hành vi submit form
     formElement.onsubmit = function (event) {
         event.preventDefault();
 
@@ -125,7 +117,6 @@ function Validator(formSelector) {
             }
         }
 
-        //Khi không có lỗi thì submit form
         if (isValid) {
             if(typeof _this.onSubmit === 'function') {
                 var enableInputs = formElement.querySelectorAll('[name]');

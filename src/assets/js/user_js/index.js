@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentSlide = 0;
     const slideCount = slides.length;
 
-    // Create dots
     slides.forEach((_, index) => {
         const dot = document.createElement('div');
         dot.classList.add('dot');
@@ -41,14 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
         updateSlides();
     }
 
-    // Event listeners
     prevBtn.addEventListener('click', prevSlide);
     nextBtn.addEventListener('click', nextSlide);
 
-    // Auto slide
     let slideInterval = setInterval(nextSlide, 5000);
 
-    // Pause auto slide on hover
     const sliderContainer = document.querySelector('.slider-container');
     sliderContainer.addEventListener('mouseenter', () => {
         clearInterval(slideInterval);
@@ -58,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
         slideInterval = setInterval(nextSlide, 5000);
     });
 
-    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') prevSlide();
         if (e.key === 'ArrowRight') nextSlide();
@@ -94,28 +89,24 @@ document.addEventListener('DOMContentLoaded', () => {
         const busImgRect = busImg.getBoundingClientRect();
         const windowHeight = window.innerHeight;
     
-        // Tính toán vùng thấy (viewport) của ảnh
         const visibleHeight = Math.max(
             0,
             Math.min(busImgRect.bottom, windowHeight) - Math.max(busImgRect.top, 0)
         );
     
-        // Tính tỷ lệ vùng thấy so với chiều cao thực của ảnh
         const visibilityRatio = visibleHeight / busImgRect.height;
     
         if (visibilityRatio > 0.1) {
-            // Nếu hơn 10% của ảnh còn thấy, thêm hiệu ứng
             busImg.classList.add("active");
         } else {
-            // Nếu hơn 90% bị ẩn, loại bỏ hiệu ứng
             busImg.classList.remove("active");
         }
     });
 
     document.querySelector('#facebook-btn').addEventListener('click', function () {
-        const link = this.querySelector('a'); // "this" ở đây là #facebook-btn
+        const link = this.querySelector('a'); 
         if (link) {
-            link.click(); // Kích hoạt sự kiện nhấp vào thẻ <a>
+            link.click(); 
         }
     });
     

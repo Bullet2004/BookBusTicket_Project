@@ -1,4 +1,3 @@
-// Danh sách đơn đặt vé
 const bookings = [
   {
     id: 1,
@@ -110,16 +109,14 @@ const bookings = [
     },    
 ];
 
-// Lấy danh sách các tuyến đường duy nhất
 function getUniqueRoutes() {
   const routes = bookings.map((booking) => booking.route);
   return ["Tất cả", ...new Set(routes)];
 }
 
-// Hàm hiển thị danh sách đặt vé
 function renderTable(filteredBookings) {
   const tableBody = document.getElementById("booking-table-body");
-  tableBody.innerHTML = ""; // Xóa nội dung cũ
+  tableBody.innerHTML = ""; 
 
   filteredBookings.forEach((booking, index) => {
     const row = document.createElement("tr");
@@ -140,7 +137,6 @@ function renderTable(filteredBookings) {
       </td>
     `;
 
-    // Gắn sự kiện cho các nút
     const acceptBtn = row.querySelector(".accept-btn");
     const rejectBtn = row.querySelector(".reject-btn");
 
@@ -151,25 +147,21 @@ function renderTable(filteredBookings) {
   });
 }
 
-// Hàm cập nhật trạng thái
 function updateStatus(index, newStatus) {
   bookings[index].status = newStatus;
   applyFilters();
 }
 
-// Hàm áp dụng bộ lọc
 function applyFilters() {
   const routeFilter = document.getElementById("route-filter").value;
   const dateFilter = document.getElementById("date-filter").value;
 
   let filteredBookings = bookings;
 
-  // Lọc theo tuyến đường
   if (routeFilter !== "all") {
     filteredBookings = filteredBookings.filter((booking) => booking.route === routeFilter);
   }
 
-  // Lọc theo ngày
   if (dateFilter) {
     filteredBookings = filteredBookings.filter((booking) => booking.time.startsWith(dateFilter));
   }
@@ -177,7 +169,6 @@ function applyFilters() {
   renderTable(filteredBookings);
 }
 
-// Hiển thị danh sách các tuyến đường trong <select>
 function populateRouteFilter() {
   const routeFilter = document.getElementById("route-filter");
   const routes = getUniqueRoutes();
@@ -190,7 +181,6 @@ function populateRouteFilter() {
   });
 }
 
-// Gắn sự kiện cho bộ lọc
 document.addEventListener("DOMContentLoaded", () => {
   populateRouteFilter();
   renderTable(bookings);

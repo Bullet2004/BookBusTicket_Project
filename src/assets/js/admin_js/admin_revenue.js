@@ -9,7 +9,6 @@ const monthlyData = {
     "2": [200, 300, 400, 500, 600, 700, 800],
 };
 
-// Yearly comparison data
 const yearlyComparisonData = {
     "2020": [400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950],
     "2021": [450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000],
@@ -18,7 +17,6 @@ const yearlyComparisonData = {
     "2024": [700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800]
 };
 
-// Chart.js global configuration
 Chart.defaults.font.family = "'Poppins', sans-serif";
 Chart.defaults.color = '#64748b';
 Chart.defaults.borderColor = '#e2e8f0';
@@ -149,7 +147,6 @@ function updateMonthlyChart() {
     monthlyChart.update();
 }
 
-// Yearly Comparison Chart
 const ctxYearlyComparison = document.getElementById('yearlyComparisonChart').getContext('2d');
 let yearlyComparisonChart = new Chart(ctxYearlyComparison, {
     type: 'line',
@@ -220,5 +217,4 @@ function updateYearlyComparisonChart() {
     yearlyComparisonChart.update();
 }
 
-// Initialize the yearly comparison chart
 updateYearlyComparisonChart();

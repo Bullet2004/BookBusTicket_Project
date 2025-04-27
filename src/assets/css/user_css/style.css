@@ -46,6 +46,28 @@ body {
     font-weight: 700;
 }
 
+.nav-links li {
+    position: relative;
+    list-style: none;
+}
+
+.nav-links li::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px; /* độ dày border */
+    background-color: var(--primary-color); /* màu border */
+    transition: width 0.2s ease;
+}
+
+.nav-links li:hover::after {
+    width: 100%;
+}
+
+
 .nav-links {
     display: flex;
     list-style: none;
