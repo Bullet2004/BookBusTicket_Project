@@ -111,6 +111,7 @@
 @media (max-width: 768px) {
     .contact-header {
         padding: 3rem 1rem;
+        margin-top: 13rem;
     }
 
     .contact-header-text h1 {
@@ -346,5 +347,11 @@
 
     .contact-form {
         padding: 1.5rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .contact-header {
+        margin-top: 12rem;
     }
 }
